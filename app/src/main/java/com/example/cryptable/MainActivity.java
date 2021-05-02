@@ -3,6 +3,7 @@ package com.example.cryptable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -23,14 +24,16 @@ public class MainActivity extends AppCompatActivity {
         imageEncrypt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Image", Toast.LENGTH_SHORT).show();
+                Intent imgIntent = new Intent(MainActivity.this, ImageEncrypt.class);
+                startActivity(imgIntent);
             }
         });
 
         textEncrypt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Text", Toast.LENGTH_SHORT).show();
+                Intent textIntent = new Intent(MainActivity.this, TextEncrypt.class);
+                startActivity(textIntent);
             }
         });
     }
