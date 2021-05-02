@@ -55,6 +55,7 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
+            app:tint="@color/navy_blue"
             android:src="@drawable/edit" />
 
         <TextView
