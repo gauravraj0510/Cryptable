@@ -73,7 +73,8 @@
                     android:backgroundTint="@color/pastel"
                     android:text="Encrypt"
                     android:textColor="@color/white"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:onClick="enc"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -107,7 +108,7 @@
                     android:layout_marginHorizontal="15dp"
                     android:layout_marginTop="20dp"
                     android:backgroundTint="#00000000"
-                    android:text="Your encrypted text:-"
+                    android:text=""
                     android:textColor="@color/navy_blue"
                     android:textColorHint="@color/navy_blue"
                     android:textSize="14sp" />
@@ -122,7 +123,8 @@
                     android:textColor="@color/white"
                     android:backgroundTint="@color/pastel"
                     android:text="Copy Text"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:onClick="copy"/>
             </LinearLayout>
 
 

@@ -44,7 +44,7 @@ public class TextEncoder extends AppCompatActivity {
     }
 
     public void copy(View view){
-        String data = encryptedText.getText().toString();
+        String data = encryptedText.getText().toString().trim();
         if(!data.isEmpty()){
             ClipData temp = ClipData.newPlainText("text", data);
             clipboardManager.setPrimaryClip(temp);

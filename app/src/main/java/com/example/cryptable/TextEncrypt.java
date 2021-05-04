@@ -32,5 +32,13 @@ public class TextEncrypt extends AppCompatActivity {
                 startActivity(enc);
             }
         });
+
+        decrypt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent dec = new Intent(TextEncrypt.this, TextDecoder.class);
+                startActivity(dec);
+            }
+        });
     }
 }
