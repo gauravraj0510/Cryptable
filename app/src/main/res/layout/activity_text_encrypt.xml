@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@drawable/background"
     tools:context=".TextEncrypt">
 
     <ImageView
@@ -18,44 +18,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/text_logo" />
 
-    <TextView
+    <Button
         android:id="@+id/enc_text_btn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="30dp"
-        android:background="@drawable/search_bg"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/pastel"
         android:text="Encrypt"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:textAllCaps="true"
-        android:textStyle="bold"
-        android:backgroundTint="@color/pastel2"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="18sp"
-        android:elevation="3dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <Button
         android:id="@+id/dec_text_btn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="30dp"
-        android:background="@drawable/search_bg"
-        android:backgroundTint="@color/pastel2"
-        android:text="Decrypt"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:textAllCaps="true"
-        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/pastel"
+        android:text="Decryt"
+        android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enc_text_btn" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

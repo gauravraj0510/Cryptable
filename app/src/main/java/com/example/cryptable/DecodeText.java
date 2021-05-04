@@ -5,7 +5,7 @@ import static java.lang.Math.pow;
 public class DecodeText {
 
     public static String decText(String s){
-        String inv="This code was not encryptes by Cryptable";
+        String inv="This code was not encrypted by Cryptable";
         String initializer = "11111111";
         Boolean flag = true;
         for (int i=0; i<8 ; i++){

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@drawable/background"
     tools:context=".TextEncrypt">
 
     <ImageView
@@ -32,7 +32,7 @@
         android:textAllCaps="true"
         android:textStyle="bold"
         android:backgroundTint="@color/pastel"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:elevation="3dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,7 +51,7 @@
         android:text="Decrypt"
         android:textAlignment="center"
         android:gravity="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textAllCaps="true"
         android:textStyle="bold"
         android:textSize="18sp"
