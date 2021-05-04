@@ -39,13 +39,13 @@ public class TextDecoder extends AppCompatActivity {
         decryptBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dec(view);
+                Toast.makeText(TextDecoder.this, "Working", Toast.LENGTH_SHORT).show();
             }
         });
         copyTextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                copyDec(view);
+                Toast.makeText(TextDecoder.this, "Working", Toast.LENGTH_SHORT).show();
             }
         });
     }

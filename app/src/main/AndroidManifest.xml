@@ -11,7 +11,8 @@
         android:roundIcon="@drawable/cryptable"
         android:supportsRtl="true"
         android:theme="@style/Theme.Cryptable">
-        <activity android:name=".TextDecoder"></activity>
+        <activity android:name=".TextDecoder"
+            android:parentActivityName=".TextEncrypt"></activity>
         <activity android:name=".TextEncoder"
             android:parentActivityName=".TextEncrypt"/>
         <activity
