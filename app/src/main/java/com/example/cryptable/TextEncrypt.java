@@ -30,6 +30,7 @@ public class TextEncrypt extends AppCompatActivity {
             public void onClick(View view) {
                 Intent enc = new Intent(TextEncrypt.this, TextEncoder.class);
                 startActivity(enc);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
 
@@ -38,6 +39,7 @@ public class TextEncrypt extends AppCompatActivity {
             public void onClick(View view) {
                 Intent dec = new Intent(TextEncrypt.this, TextDecoder.class);
                 startActivity(dec);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
     }

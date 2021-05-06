@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent imgIntent = new Intent(MainActivity.this, ImageEncrypt.class);
                 startActivity(imgIntent);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
 
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent textIntent = new Intent(MainActivity.this, TextEncrypt.class);
                 startActivity(textIntent);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
     }
