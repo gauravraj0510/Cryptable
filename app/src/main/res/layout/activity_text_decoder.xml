@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TextEncoder"
+    tools:context=".TextDecoder"
     android:background="@drawable/background">
 
 
@@ -72,6 +72,7 @@
                     android:layout_marginTop="20dp"
                     android:backgroundTint="@color/pastel"
                     android:text="Decrypt"
+                    android:onClick="dec"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
 
@@ -122,6 +123,7 @@
                     android:textColor="@color/white"
                     android:backgroundTint="@color/pastel"
                     android:text="Copy Text"
+                    android:onClick="copyDec"
                     android:textSize="18sp" />
             </LinearLayout>
 

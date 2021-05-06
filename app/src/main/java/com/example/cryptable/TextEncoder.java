@@ -8,6 +8,7 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -19,6 +20,7 @@ public class TextEncoder extends AppCompatActivity {
     TextView encryptedText;
     Button encryptBtn, copyTextBtn;
     ClipboardManager clipboardManager;
+    final String secretKey = "ssshhhhhhhhhhh!!!!";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +37,14 @@ public class TextEncoder extends AppCompatActivity {
         encryptBtn = findViewById(R.id.encrypt_btn);
         copyTextBtn = findViewById(R.id.copy_text_btn);
         clipboardManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+
     }
 
     public void enc(View view){
         String temp = enterText.getText().toString();
-        String rv = EncodeText.encText(temp);
+        String rv = AESText.encrypt(temp, secretKey);
         encryptedText.setText(rv);
+        closeKeyboard();
     }
 
     public void copy(View view){
@@ -49,6 +53,14 @@ public class TextEncoder extends AppCompatActivity {
             ClipData temp = ClipData.newPlainText("text", data);
             clipboardManager.setPrimaryClip(temp);
             Toast.makeText(this, "Copied to clipboard!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void closeKeyboard() {
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
     }
 }

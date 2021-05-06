@@ -8,6 +8,7 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -19,6 +20,7 @@ public class TextDecoder extends AppCompatActivity {
     TextView decryptedText;
     Button decryptBtn, copyTextBtn;
     ClipboardManager clipboardManager;
+    final String secretKey = "ssshhhhhhhhhhh!!!!";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,24 +38,13 @@ public class TextDecoder extends AppCompatActivity {
         copyTextBtn = findViewById(R.id.copy_txt_btn_dec);
         clipboardManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
 
-        decryptBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(TextDecoder.this, "Working", Toast.LENGTH_SHORT).show();
-            }
-        });
-        copyTextBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(TextDecoder.this, "Working", Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
     public void dec(View view){
         String temp = enterText.getText().toString();
-        String rv = DecodeText.decText(temp);
+        String rv = AESText.decrypt(temp, secretKey);
         decryptedText.setText(rv);
+        closeKeyboardD();
     }
 
     public void copyDec(View view){
@@ -65,4 +56,11 @@ public class TextDecoder extends AppCompatActivity {
         }
     }
 
+    private void closeKeyboardD() {
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
+    }
 }
