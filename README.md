@@ -3,7 +3,7 @@
 A basic android app for encrypting and decrypting images and texts.
 
 ## Download
-<a href='https://github.com/gauravraj0510/PopChat/releases/download/v1.1/PopChat-v1.1.apk'>
+<a href='https://github.com/gauravraj0510/Cryptable/releases/download/v1.0/Cryptable.v1.0.apk'>
 <img alt='Download from release' src='https://www.inspirefm.org/wp-content/uploads/button-apk.png' width=200>
 </a>
 
