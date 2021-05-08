@@ -11,17 +11,17 @@ A basic android app for encrypting and decrypting images and texts.
 Gaurav Raj - [LinkedIn](https://www.linkedin.com/in/gaurav-raj-5893b0195/)
 
 ## Home Screen
-<img src='Examples/1.jpg' width='500' >
+<img src='Examples/1.jpg' height='500' >
 
 ## Text Cryption
 
-<img src='Examples/2.jpg' width='500' >
-<img src='Examples/3.jpg' width='500' >
-<img src='Examples/4.jpg' width='500' >
+<img src='Examples/2.jpg' height='500' >
+<img src='Examples/3.jpg' height='500' >
+<img src='Examples/4.jpg' height='500' >
 
 ## Image Cryption
 
-<img src='Examples/5.jpg' width='500' >
-<img src='Examples/6.jpg' width='500' >
-<img src='Examples/7.jpg' width='500' >
-<img src='Examples/8.jpg' width='500' >
+<img src='Examples/5.jpg' height='500' >
+<img src='Examples/6.jpg' height='500' >
+<img src='Examples/7.jpg' height='500' >
+<img src='Examples/8.jpg' height='500' >
