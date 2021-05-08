@@ -8,9 +8,13 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.ImageDecoder;
 import android.net.Uri;
 import android.os.Bundle;
@@ -19,6 +23,8 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
@@ -29,6 +35,9 @@ public class ImageEncrypt extends AppCompatActivity {
 
     Button encryptBtn, decryptBtn;
     String sImage;
+    ImageView imageView;
+    TextView encImgToText;
+    ClipboardManager clipboardManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +50,9 @@ public class ImageEncrypt extends AppCompatActivity {
 
         encryptBtn = findViewById(R.id.enc_img_btn);
         decryptBtn = findViewById(R.id.dec_img_btn);
+        encImgToText = findViewById(R.id.encText);
+        imageView = findViewById(R.id.imageView);
+        clipboardManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
 
         encryptBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +69,9 @@ public class ImageEncrypt extends AppCompatActivity {
         decryptBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                byte[] bytes = Base64.decode(sImage, Base64.DEFAULT);
+                Bitmap bitmap = BitmapFactory.decodeByteArray(bytes,0,bytes.length);
+                imageView.setImageBitmap(bitmap);
             }
         });
     }
@@ -96,12 +110,21 @@ public class ImageEncrypt extends AppCompatActivity {
                     bitmap.compress(Bitmap.CompressFormat.JPEG,100, stream);
                     byte[] bytes = stream.toByteArray();
                     sImage = Base64.encodeToString(bytes, Base64.DEFAULT);
-                    Toast.makeText(this, sImage, Toast.LENGTH_SHORT).show();
-
+                    encImgToText.setText(sImage);
+                    Toast.makeText(this, "Image encrypted! Click on Decrypt to restore!", Toast.LENGTH_SHORT).show();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
+        }
+    }
+
+    public void copyImgCode(View view){
+        String data = encImgToText.getText().toString().trim();
+        if(!data.isEmpty()){
+            ClipData temp = ClipData.newPlainText("text", data);
+            clipboardManager.setPrimaryClip(temp);
+            Toast.makeText(this, "Copied to clipboard!", Toast.LENGTH_SHORT).show();
         }
     }
 }
