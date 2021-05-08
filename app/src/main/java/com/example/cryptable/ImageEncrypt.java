@@ -23,6 +23,7 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,7 +37,7 @@ public class ImageEncrypt extends AppCompatActivity {
     Button encryptBtn, decryptBtn;
     String sImage;
     ImageView imageView;
-    TextView encImgToText;
+    EditText encImgToText;
     ClipboardManager clipboardManager;
 
     @Override
@@ -69,7 +70,7 @@ public class ImageEncrypt extends AppCompatActivity {
         decryptBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                byte[] bytes = Base64.decode(sImage, Base64.DEFAULT);
+                byte[] bytes = Base64.decode(encImgToText.getText().toString(), Base64.DEFAULT);
                 Bitmap bitmap = BitmapFactory.decodeByteArray(bytes,0,bytes.length);
                 imageView.setImageBitmap(bitmap);
             }

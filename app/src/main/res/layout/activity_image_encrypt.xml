@@ -67,19 +67,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
+            <EditText
                 android:id="@+id/encText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="14sp"
                 android:background="@color/white"
-                android:gravity="center"
-                android:hint="Encryted Image Code..."
-                android:textColorHint="#737373"
                 android:padding="10dp"
+                android:hint="Enter your text here..."
                 android:textColor="@color/navy_blue"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dec_img_btn" />
+                android:textColorHint="@color/navy_blue" />
 
 
         </LinearLayout>
