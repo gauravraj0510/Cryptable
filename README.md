@@ -1,6 +1,7 @@
 # Cryptable - Android Cryptography Project
 
 A basic android app for encrypting and decrypting images and texts.
+<img src='Examples/cryptable.png' height='500' >
 
 ## Download
 <a href='https://github.com/gauravraj0510/Cryptable/releases/download/v1.0/Cryptable.v1.0.apk'>
