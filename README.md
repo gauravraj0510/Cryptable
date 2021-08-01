@@ -9,7 +9,7 @@
 <img alt='Download from release' src='https://www.inspirefm.org/wp-content/uploads/button-apk.png' width=200>
 </a>
 
-## Developer
+## Developed by
 Gaurav Raj - [LinkedIn](https://www.linkedin.com/in/gaurav-raj-5893b0195/)
 
 ## Home Screen
