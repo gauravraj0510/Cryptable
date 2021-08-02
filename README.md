@@ -4,7 +4,7 @@
 <br>
 <img src='Examples/cryptable.png' height='150' >
 
-## Download
+## Download App
 <a href='https://github.com/gauravraj0510/Cryptable/releases/download/v1.0/Cryptable.v1.0.apk'>
 <img alt='Download from release' src='https://www.inspirefm.org/wp-content/uploads/button-apk.png' width=200>
 </a>
