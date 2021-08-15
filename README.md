@@ -12,7 +12,7 @@
 ## Developed by
 Gaurav Raj - [LinkedIn](https://www.linkedin.com/in/gaurav-raj-5893b0195/)
 
-## Home Screen
+## Landing Screen
 <img src='Examples/1.jpg' height='500' >
 
 ## Text Cryption
