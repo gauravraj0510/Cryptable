@@ -1,6 +1,6 @@
 # Cryptable - Android Cryptography Project
 
-- An Android App for encrypting and decrypting images and texts.
+- An Android Application for encrypting and decrypting images and texts.
 <br>
 <img src='Examples/cryptable.png' height='150' >
 
